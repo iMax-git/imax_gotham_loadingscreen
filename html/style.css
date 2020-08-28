@@ -1,0 +1,139 @@
+@font-face{
+    font-family: blacklist;
+    src: url("font/blacklist/Blacklisted.ttf");
+}
+
+@font-face{
+    font-family: caviar_dream;
+    src: url(font/caviar_dreams/CaviarDreams.ttf);
+}
+@font-face{
+    font-family: fallout;
+    src: url(font/fallout/fallout.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+#left{
+    background-color: rgb(59, 59, 59);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    height: 40px;
+    width: 40px;
+    border: 1mm solid;
+    border-radius: 30px;
+}
+
+#left .content{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+#left #develop_l{
+    display: none;
+    background-color: rgb(59, 59, 59);
+    border: 1mm solid;
+    border-radius: 30px;
+    height: 200px;
+    width: 270px;
+    padding: 20px;
+    position: fixed;
+    top: 55%;
+}
+
+
+#develop_l h1{
+    font-family: blacklist;
+    font-size: 15px;
+}
+
+#develop_l p{
+    font-family: caviar_dream;
+    font-size: 15px;
+    padding: 5px;
+}
+
+
+
+#right{
+    background-color: rgb(59, 59, 59);
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    height: 40px;
+    width: 40px;
+    border: 1mm solid;
+    border-radius: 30px;
+    float: right;
+}
+
+#right #content_r{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+#right #develop{
+    display: none;
+    right: 5%;
+    background-color: rgb(59, 59, 59);
+    border: 1mm solid;
+    border-radius: 30px;
+    height: 200px;
+    width: 270px;
+    padding: 20px;
+    position: fixed;
+    top: 55%;
+}
+
+li{
+    list-style-type: none;
+}
+
+#develop h1{
+    font-family: blacklist;
+    font-size: 15px;
+}
+
+#develop li{
+    font-family: caviar_dream;
+    font-size: 15px;
+    padding: 5px;
+}
+
+#sign img{
+    position: absolute;
+    height: 50px;
+    top: 90%;
+    left: 95%;
+}
+
+#sign h1 {
+    font-family: fallout;
+    position: absolute;
+    top: 92%;
+    left: 85%;
+    color:rgb(80, 80, 80);
+}
+
+#icon_l {
+    color: white;
+}
+
+#icon_r {
+    color: white;
+}

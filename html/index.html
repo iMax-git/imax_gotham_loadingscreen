@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head lang="fr">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="font/FA/all.css">
+        <link rel="stylesheet" href="/font/FA/all.min.css">
+        <title>iMax-Gotham-LoadingScreen</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="preload.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="button.js"></script>
+    </head>
+    <body>
+        <section id="preload">
+            <div class="text">
+                Gotham
+            </div>
+            <div class="title">
+                Created by iMax#0705
+            </div>
+            <div class="bar">
+                <div id="fill"></div>
+            </div>
+        </section>
+        <section id="main">
+            <iframe id="video" type="text/html"
+                    src="http://www.youtube.com/embed/mBEhI1XfXOg?autoplay=1&controls=0&loop=1&disablekb=1&fs=0"
+            frameborder="0"></iframe>
+            <section onclick="toggle_left()" id="left">
+                <div class="content">
+                    <p id="icon_l" class="fas fa-info-circle"></p>
+                </div>
+                <div id="develop_l">
+                    <h1>Equipe Administrative</h1>
+                    <p>Toute l'équipe Administrative vous souhaite bienvenu sur le serveur Fivem</p>
+                    <p>Le serveur à été fonder et réaliser par Kev !</p>
+                </div>
+            </section>
+            <section onclick="toggle_right()" id="right">
+                <div id="content_r">
+                    <p id="icon_r" class="fas fa-clipboard-list"></p>
+                </div>
+                <div id="develop">
+                    <h1>Information sur les Regles</h1>
+                    <ul>
+                        <li>- Respecter l'esprit du serveur !</li>
+                        <li>- Respecter l'univers Gotham !</li>
+                        <li>- Soyez Courtois</li>
+                        <li>* Pour toute question, envoyer un mp a Kev#4032.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="sign">
+                <img src="assets/imax.png" alt="imax">
+                <h1>Created by iMax#0705</h1>
+            </section>
+        </section>
+    </body>
+    <script type="text/javascript">
+        var progress = 0;
+        document.onreadystatechange = function()
+        {
+            if(document.readyState == "interactive")
+            {
+                var allElement = $("*");
+                var length = allElement.length;
+                for(var i=0;i<length;i++)
+                {
+                    set_element(allElement[i],length)
+                }
+            }
+        } 
+        function set_element(element,totalElement)
+        {
+            var percetage = 100/totalElement;
+            if($(element).length==1)
+            {
+                $("#fill").animate({width:progress+percetage+"%"}, 400,function(){
+                    var fill = document.getElementById("fill");
+                    if(fill.style.width=="100%")
+                    {
+                        $("#preload").fadeOut(500);
+                    }
+                });
+                progress = progress + percetage;    
+            }
+        }
+    </script>
+</html> 
